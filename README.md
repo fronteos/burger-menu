@@ -1,7 +1,7 @@
 # Burger-menu
 This component is a trigger for menu, mainly on mobile versions of websites and is made without images.
 
-Read more about "Hover box": http://css-workshop.com/burger-menu/
+Read more about "Burger menu": http://css-workshop.com/burger-menu/
 
 Watch live demo: http://css-workshop.com/examples/burger-menu/
 

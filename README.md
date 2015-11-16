@@ -1,4 +1,4 @@
-# burger-menu
+# Burger-menu
 This component is a trigger for menu, mainly on mobile versions of websites and is made without images.
 
 Read more about "Hover box": http://css-workshop.com/burger-menu/

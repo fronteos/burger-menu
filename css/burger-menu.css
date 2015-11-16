@@ -1,0 +1,64 @@
+/* 
+ * 	Author: Piotr Elmanowski
+ *  Company: Frontoes.com
+ *  Distributed and described: css-workshop.com
+ *	v1.0
+ */
+ 
+.burger-menu {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+	position: relative;
+}
+.burger-menu span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 2px;
+	margin-top: 8px;
+	background: #000;
+}
+.burger-menu span:first-child {
+	margin-top: 0;
+}
+.burger-menu .lines,
+.burger-menu .crossed {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.burger-menu .crossed {
+	display: none;
+}
+.burger-menu .lines {
+	display: block;
+}
+.burger-menu.active .crossed {
+	display: block;
+}
+.burger-menu.active .lines {
+	display: none;
+}
+.burger-menu.active .crossed span {
+	position:absolute;
+	margin: 0;
+	width: 100%;
+}
+.burger-menu.active .crossed span:first-child {
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+.burger-menu.active .crossed span:last-child {
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}

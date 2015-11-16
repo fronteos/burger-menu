@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BURGER MENU | CSS-WORKSHOP.COM BY FRONTEOS.COM</title>
+    <meta name="description" content="Make UI on your own. HTML5, CSS3 tips, components, web templates, JavaScript.">
+	<meta name="keywords" content="css, css3, html, html5, javasctipy, front-end, front-end tips, css tips, html components, jQuery">
+	<meta name="author" content="Piotr Elmanowski from Fronteos.com and Css-workshop.com">
+	
+	<meta property="og:image" content="img/og-logo.png">
+	<meta property="og:title" content="CSS-WORKSHOP.COM">
+	<meta property="og:description" content="Make UI on your own. HTML5, CSS3 tips, components, web templates, JavaScript.">
+	<meta property="og:type" content="website">
+
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/burger-menu.css">
+	<link type="image/ico" rel="shortcut icon" href="favicon.png">	
+	
+</head>
+<body>
+	<header>
+		<a href="http://css-workshop.com" title="Go back to css-workshop.com"><img src="img/cssworkshop-logo.png" alt="CSS-WORKSHOP.COM"></a>
+		<h1>BURGER MENU</h1>
+	</header>
+	<div class="content">
+		<a href="http://css-workshop.com/examples/hover-box/css-workshop.com_hover-box.zip">Download component</a> or
+		<a href="http://css-workshop.com/hover-box-text-over-images-on-hover-and-more/">Go back to article</a>
+		<h2>Example</h2>
+		<p>This component is usually used as trigger for menu, mainly on mobile versions of websites. Burger menu here is made without image. jQuery is required.</p>
+		<div class="wrapper">
+			<a href="#" class="burger-menu" title="menu-mobile">
+				<div class="lines">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="crossed">
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<p>HTML</p>
+<pre>
+&lt;a href="#" class="burger-menu" title="menu-mobile"&gt;
+	&lt;div class="lines"&gt;
+		&lt;span&gt;&lt;/span&gt;
+		&lt;span&gt;&lt;/span&gt;
+		&lt;span&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="crossed"&gt;
+		&lt;span&gt;&lt;/span&gt;
+		&lt;span&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+</pre>
+		<p>CSS</p>
+<pre>
+.burger-menu {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+	position: relative;
+}
+.burger-menu span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 2px;
+	margin-top: 8px;
+	background: #000;
+}
+.burger-menu span:first-child {
+	margin-top: 0;
+}
+.burger-menu .lines,
+.burger-menu .crossed {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.burger-menu .crossed {
+	display: none;
+}
+.burger-menu .lines {
+	display: block;
+}
+.burger-menu.active .crossed {
+	display: block;
+}
+.burger-menu.active .lines {
+	display: none;
+}
+.burger-menu.active .crossed span {
+	position:absolute;
+	margin: 0;
+	width: 100%;
+}
+.burger-menu.active .crossed span:first-child {
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+.burger-menu.active .crossed span:last-child {
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+</pre>
+		<p>JavaScript</p>
+<pre>
+$(".burger-menu").click(function(e) {
+	e.preventDefault();
+	$(this).toggleClass("active");
+	/* Here you can toggle your menu baseing on your html markkup */
+});
+</pre>
+	</div>
+	<footer>
+		Author: <a href="https://pl.linkedin.com/in/piotre" target="blank" title="Web front-end developer">Piotr Elmanowski</a> | <a href="http://css-workshop.com" target="blank" title="Front-end, css, html and JavaScript tips and components">css-workshop.com</a> by <a href="http://fronteos.com" target="blank" title="High quality responsive websites and dedicated front-end provider">fronteos.com</a>
+	</footer>
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/burger-menu.js"></script>
+	
+</body>
+</html>
